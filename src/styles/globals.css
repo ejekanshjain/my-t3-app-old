@@ -1,0 +1,67 @@
+/* Fonts start */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+/* Fonts end */
+
+/* tailwind */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .animated {
+    @apply transition-all duration-300;
+  }
+}
+
+/* tailwind end */
+
+/* Global classes Start */
+
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.no_highlights {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Global classes End */
+
+/* nprogress */
+
+#nprogress {
+  @apply pointer-events-none;
+}
+
+#nprogress .bar {
+  @apply bg-blue-600 fixed z-[1000] top-0 left-0 w-full h-1;
+}
+
+#nprogress .spinner {
+  @apply block fixed z-[1001] top-1 right-1 sm:top-2 sm:right-2;
+}
+
+#nprogress .spinner-icon {
+  @apply w-5 h-5 box-border border-2 border-transparent border-t-blue-600 border-l-blue-600 rounded-full;
+  animation: nprogress-spinner 500ms linear infinite;
+}
+
+@keyframes nprogress-spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* nprogress end */
