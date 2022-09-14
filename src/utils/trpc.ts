@@ -1,4 +1,3 @@
-// src/utils/trpc.ts
 import { createReactQueryHooks } from '@trpc/react'
 import type { inferProcedureInput, inferProcedureOutput } from '@trpc/server'
 import type { AppRouter } from '../server/router'
